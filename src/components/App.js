@@ -1,9 +1,9 @@
 import React from 'react'
 
-const App = () => {
+const App = () => (
   <h1>
-    Hola mundo
+    Plataforma de educación online
   </h1>
-}
+)
 
 export default App;
