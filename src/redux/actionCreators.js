@@ -1,10 +1,19 @@
 import Axios from "axios";
-import {GET_ALL_COURSES, GET_ALL_POSTS, GET_ALL_SPECIALITIES, GET_ALL_TEACHERS, GET_COURSE, GET_FRAGMENT, GET_POST, GET_SPECIALITY } from "./actions";
+import {
+  GET_ALL_POSTS,  
+  GET_ALL_SPECIALITIES, 
+  GET_ALL_COURSES, 
+  GET_ALL_TEACHERS, 
+  GET_POST, 
+  GET_SPECIALITY,
+  GET_COURSE, 
+  GET_FRAGMENT, 
+} from "./actions";
 
 const API_URL = process.env.REACT_APP_API_URL
 
 export const getAllPosts = () => dispatch =>{
-Axios.get(`${API_URL}/post`)
+Axios.get(`${API_URL}/posts`)
 .then(resp =>{
     return dispatch({
       type: GET_ALL_POSTS,
@@ -36,7 +45,7 @@ export const getAllCourses= () => dispatch =>{
 }
 export const getAllTeachers= () => dispatch =>{
   Axios.get(`${API_URL}/profesores`)
-  .then(resp =>{
+  .then(resp => {
       return dispatch({
         type: GET_ALL_TEACHERS,
         teachers: resp.data
@@ -56,7 +65,7 @@ export const getPost= id => dispatch =>{
   )
 }
 export const getSpeciality= id => dispatch =>{
-  Axios.get(`${API_URL}/especilidades/${id}`)
+  Axios.get(`${API_URL}/especialidad/${id}`)
   .then(resp =>{
       return dispatch({
         type: GET_SPECIALITY,
@@ -65,8 +74,8 @@ export const getSpeciality= id => dispatch =>{
     }
   )
 }
-export const getCourse= id => dispatch =>{
-  Axios.get(`${API_URL}/cursos/${id}`)
+export const getCourse = id => dispatch =>{
+  Axios.get(`${API_URL}/curso/${id}`)
   .then(resp =>{
       return dispatch({
         type: GET_COURSE,

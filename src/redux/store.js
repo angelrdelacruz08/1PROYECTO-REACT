@@ -4,15 +4,18 @@ import thunk from"redux-thunk"
 import {
     postReducer, 
     specialityReducer,
-    teacherReducer, 
-    fragmentReducer,
+    teacherReducer,
+    courseReducer, 
+    fragmentReducer
+
     } from "./reducers" 
 
 export default createStore(
   combineReducers({
-    postReducer, 
+    postReducer,
     specialityReducer, 
     teacherReducer, 
+    courseReducer,
     fragmentReducer
   }),
   composeWithDevTools(applyMiddleware(thunk))

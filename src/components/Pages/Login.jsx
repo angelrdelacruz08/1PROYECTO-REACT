@@ -14,9 +14,10 @@ const authentication = (e) => {
  Axios.post('https://api-edteam.alejogs4.now.sh/login', data)
    .then((response) => {
      localStorage.setItem("token", response.data.token);
-     window.location = "/";
+     window.location = "/"
    })
-   .catch((error) => console.log(error));
+   .catch(e=> {
+     alert ("Error la iniciar sesión")});
 };
 
 const Login = () => {
