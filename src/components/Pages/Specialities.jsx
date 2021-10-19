@@ -28,7 +28,12 @@ const Specialities = ({ specialities}) => {
     <main className="ed-grid m-grid-3">
       {
         specialities.map(s =>(
-          <Card picture={s.picture} name={s.name} key={s.id} />
+          <Card 
+          path="especialidades"
+          picture={s.picture} 
+          name={s.name} 
+          key={s.id}  
+          cardId={s.id}/>
         ))
       }
     </main>

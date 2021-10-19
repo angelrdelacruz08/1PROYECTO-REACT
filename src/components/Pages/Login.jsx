@@ -54,7 +54,7 @@ const Login = () => {
            <input
              type="submit"
              value="Iniciar sesión"
-             className="button full"
+             className="button full fourth-color"
              required
            />
          </div>

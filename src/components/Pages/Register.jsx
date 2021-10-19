@@ -65,8 +65,8 @@ const Register = () => {
          <div className="form_item">
            <input
              type="submit"
-             value="Iniciar sesión"
-             className="button full"
+             value="Registrarse"
+             className="button full fourth-color"
              required
            />
          </div>

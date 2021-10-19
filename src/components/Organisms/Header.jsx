@@ -12,7 +12,7 @@ const Header = () =>(
 <div className="ed-grid s-grid-5 lg-grid-4">
   <div className="s-cols-4 lg-cols-1 s-cross-center">
  <NavLink to ='/'>
-   <img src="https://app.ed.team/static/images/logo/isotipo-color.svg" 
+   <img src="https://ecoambientalgroup.com/wp-content/uploads/2021/09/56456.png" 
     alt="EDlogo" 
     className="main-logo"
     />

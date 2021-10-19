@@ -27,7 +27,13 @@ const Courses = ({courses}) => {
       <main className='ed-grid m-grid-5'>
         {
           courses.map(c =>(
-          <Card picture={c.picture} name={c.name} key={c.id}/>
+          <Card 
+          path="cursos"
+          picture={c.picture} 
+          name={c.name} 
+          key={c.id}
+          cardId={c.id}
+          />
 
           ))
         }
