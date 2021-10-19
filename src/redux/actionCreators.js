@@ -23,7 +23,7 @@ Axios.get(`${API_URL}/posts`)
 )
 }
 export const getAllSpecialities = () => dispatch =>{
-  Axios.get(`${API_URL}/especialidades`)
+  Axios.get(`https://hola-1acc5-default-rtdb.firebaseio.com/especialidades`)
   .then(resp =>{
       return dispatch({
         type: GET_ALL_SPECIALITIES,
@@ -34,7 +34,7 @@ export const getAllSpecialities = () => dispatch =>{
 }
 
 export const getAllCourses= () => dispatch =>{
-  Axios.get(`${API_URL}/cursos`)
+  Axios.get(`https://hola-1acc5-default-rtdb.firebaseio.com/cursos`)
   .then(resp =>{
       return dispatch({
         type: GET_ALL_COURSES,
@@ -65,7 +65,7 @@ export const getPost= id => dispatch =>{
   )
 }
 export const getSpeciality= id => dispatch =>{
-  Axios.get(`${API_URL}/especialidad/${id}`)
+  Axios.get(`https://hola-1acc5-default-rtdb.firebaseio.com/especialidad/${id}`)
   .then(resp =>{
       return dispatch({
         type: GET_SPECIALITY,
