@@ -8,7 +8,7 @@ const Course = ({ course  }) => {
 
 
   useEffect(() => {
-    store.dispatch(getCourse(1))
+    store.dispatch(getCourse(0))
   }, [])
 
 
@@ -19,7 +19,7 @@ const Course = ({ course  }) => {
           <Banner 
             color= "dark-color"
             title= {course.name}
-            subtitle ={course.subtitle}
+            subtitle ={course.information}
             image={{
               src: "http://2.bp.blogspot.com/-maLSqJBzhBs/UIiFxQqD2aI/AAAAAAAACzQ/pKpHvg2VRgM/s1600/Portada%2BAbstracta%2B14.jpg",
               alt: course.name
