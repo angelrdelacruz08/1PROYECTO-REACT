@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/1PROYECTO-REACT/static/css/main.defc09df.chunk.css",
+    "main.js": "/1PROYECTO-REACT/static/js/main.06e2d59d.chunk.js",
+    "main.js.map": "/1PROYECTO-REACT/static/js/main.06e2d59d.chunk.js.map",
+    "runtime-main.js": "/1PROYECTO-REACT/static/js/runtime-main.36d9e8f0.js",
+    "runtime-main.js.map": "/1PROYECTO-REACT/static/js/runtime-main.36d9e8f0.js.map",
+    "static/js/2.a9baecb4.chunk.js": "/1PROYECTO-REACT/static/js/2.a9baecb4.chunk.js",
+    "static/js/2.a9baecb4.chunk.js.map": "/1PROYECTO-REACT/static/js/2.a9baecb4.chunk.js.map",
+    "index.html": "/1PROYECTO-REACT/index.html",
+    "static/css/main.defc09df.chunk.css.map": "/1PROYECTO-REACT/static/css/main.defc09df.chunk.css.map",
+    "static/js/2.a9baecb4.chunk.js.LICENSE.txt": "/1PROYECTO-REACT/static/js/2.a9baecb4.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.36d9e8f0.js",
+    "static/js/2.a9baecb4.chunk.js",
+    "static/css/main.defc09df.chunk.css",
+    "static/js/main.06e2d59d.chunk.js"
+  ]
+}
