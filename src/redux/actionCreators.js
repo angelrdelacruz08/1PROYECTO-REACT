@@ -13,7 +13,7 @@ import {
 const API_URL = process.env.REACT_APP_API_URL
 
 export const getAllPosts = () => dispatch =>{
-Axios.get(`${API_URL}/posts`)
+Axios.get(`${API_URL}/posts.json`)
 .then(resp =>{
     return dispatch({
       type: GET_ALL_POSTS,
@@ -23,7 +23,7 @@ Axios.get(`${API_URL}/posts`)
 )
 }
 export const getAllSpecialities = () => dispatch =>{
-  Axios.get(`${API_URL}.json`)
+  Axios.get(`${API_URL}/especialidades.json`)
   .then(resp =>{
       return dispatch({
         type: GET_ALL_SPECIALITIES,
@@ -44,7 +44,7 @@ export const getAllCourses= () => dispatch =>{
   )
 }
 export const getAllTeachers= () => dispatch =>{
-  Axios.get(`${API_URL}/profesores`)
+  Axios.get(`${API_URL}/profesores.json`)
   .then(resp => {
       return dispatch({
         type: GET_ALL_TEACHERS,
@@ -55,7 +55,7 @@ export const getAllTeachers= () => dispatch =>{
 }
 
 export const getPost= id => dispatch =>{
-  Axios.get(`${API_URL}/posts/${id}`)
+  Axios.get(`${API_URL}/posts/${id}.json`)
   .then(resp =>{
       return dispatch({
         type: GET_POST,
@@ -65,7 +65,7 @@ export const getPost= id => dispatch =>{
   )
 }
 export const getSpeciality= id => dispatch =>{
-  Axios.get(`${API_URL}/${id}.json`)
+  Axios.get(`${API_URL}/especialidades/${id}.json`)
   .then(resp =>{
       return dispatch({
         type: GET_SPECIALITY,
@@ -75,7 +75,7 @@ export const getSpeciality= id => dispatch =>{
   )
 }
 export const getCourse = id => dispatch =>{
-  Axios.get(`${API_URL}/curso/${id}.json`)
+  Axios.get(`${API_URL}/cursos/${id}.json`)
   .then(resp =>{
       return dispatch({
         type: GET_COURSE,
