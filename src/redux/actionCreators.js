@@ -13,7 +13,7 @@ import {
 const API_URL = process.env.REACT_APP_API_URL
 
 export const getAllPosts = () => dispatch =>{
-Axios.get(`${API_URL}/posts.json`)
+Axios.get(`https://hola-1acc5-default-rtdb.firebaseio.com/posts.json`)
 .then(resp =>{
     return dispatch({
       type: GET_ALL_POSTS,
@@ -23,7 +23,7 @@ Axios.get(`${API_URL}/posts.json`)
 )
 }
 export const getAllSpecialities = () => dispatch =>{
-  Axios.get(`${API_URL}/especialidades.json`)
+  Axios.get(`https://hola-1acc5-default-rtdb.firebaseio.com/especialidades.json`)
   .then(resp =>{
       return dispatch({
         type: GET_ALL_SPECIALITIES,
@@ -34,7 +34,7 @@ export const getAllSpecialities = () => dispatch =>{
 }
 
 export const getAllCourses= () => dispatch =>{
-  Axios.get(`${API_URL}/cursos.json`)
+  Axios.get(`https://hola-1acc5-default-rtdb.firebaseio.com/cursos.json`)
   .then(resp =>{
       return dispatch({
         type: GET_ALL_COURSES,
@@ -44,7 +44,7 @@ export const getAllCourses= () => dispatch =>{
   )
 }
 export const getAllTeachers= () => dispatch =>{
-  Axios.get(`${API_URL}/profesores.json`)
+  Axios.get(`https://hola-1acc5-default-rtdb.firebaseio.com/profesores.json`)
   .then(resp => {
       return dispatch({
         type: GET_ALL_TEACHERS,
@@ -55,7 +55,7 @@ export const getAllTeachers= () => dispatch =>{
 }
 
 export const getPost= id => dispatch =>{
-  Axios.get(`${API_URL}/posts/${id}.json`)
+  Axios.get(`https://hola-1acc5-default-rtdb.firebaseio.com/posts/${id}.json`)
   .then(resp =>{
       return dispatch({
         type: GET_POST,
@@ -65,7 +65,7 @@ export const getPost= id => dispatch =>{
   )
 }
 export const getSpeciality= id => dispatch =>{
-  Axios.get(`${API_URL}/especialidades/${id}.json`)
+  Axios.get(`https://hola-1acc5-default-rtdb.firebaseio.com/especialidades/${id}.json`)
   .then(resp =>{
       return dispatch({
         type: GET_SPECIALITY,
@@ -75,7 +75,7 @@ export const getSpeciality= id => dispatch =>{
   )
 }
 export const getCourse = id => dispatch =>{
-  Axios.get(`${API_URL}/cursos/${id}.json`)
+  Axios.get(`https://hola-1acc5-default-rtdb.firebaseio.com/cursos/${id}.json`)
   .then(resp =>{
       return dispatch({
         type: GET_COURSE,
@@ -85,7 +85,7 @@ export const getCourse = id => dispatch =>{
   )
 }
 export const getFragment= id => dispatch =>{
-  Axios.get(`${API_URL}/clases/${id}.json`)
+  Axios.get(`https://hola-1acc5-default-rtdb.firebaseio.com/clases/${id}.json`)
   .then(resp =>{
       return dispatch({
         type: GET_FRAGMENT,
