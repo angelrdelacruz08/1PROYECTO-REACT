@@ -85,7 +85,7 @@ export const getCourse = id => dispatch =>{
   )
 }
 export const getFragment= id => dispatch =>{
-  Axios.get(`https://hola-1acc5-default-rtdb.firebaseio.com/clases/${id}.json`)
+  Axios.get(`${API_URL}/clases/${id}.json`)
   .then(resp =>{
       return dispatch({
         type: GET_FRAGMENT,
