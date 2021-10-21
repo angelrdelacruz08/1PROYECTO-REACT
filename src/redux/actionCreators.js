@@ -65,7 +65,7 @@ export const getPost= id => dispatch =>{
   )
 }
 export const getSpeciality= id => dispatch =>{
-  Axios.get(`https://hola-1acc5-default-rtdb.firebaseio.com/especialidad/${id}.json`)
+  Axios.get(`${API_URL}/especialidad/${id}.json`)
   .then(resp =>{
       return dispatch({
         type: GET_SPECIALITY,
@@ -85,7 +85,7 @@ export const getCourse = id => dispatch =>{
   )
 }
 export const getFragment= id => dispatch =>{
-  Axios.get(`${API_URL}/clases/${id}.json`)
+  Axios.get(`https://hola-1acc5-default-rtdb.firebaseio.com/clase/${id}.json`)
   .then(resp =>{
       return dispatch({
         type: GET_FRAGMENT,

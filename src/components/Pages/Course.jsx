@@ -3,10 +3,11 @@ import store from '../../redux/store'
 import {connect} from "react-redux"
 import { getCourse } from "../../redux/actionCreators"
 import Banner from '../Organisms/Banner'
+import { Link } from 'react-router-dom'
+
+
 
 const Course = ({ course  }) => {
-
-
   useEffect(() => {
     store.dispatch(getCourse(0))
   }, [])
@@ -26,11 +27,11 @@ const Course = ({ course  }) => {
             }}
             courseBanner
             poster={course.picture}
-            especialidad={course.data.specialities[0].name}
+            // especialidad={course.data.specialities[0].name}
             info={course.information}
           />
           <main className="ed-grid lg-grid-10">
-            <div className="lg-cols-7">
+            <div className="lg-cols-10">
               <div className="course-features ed-grid lg-grid-3 s-border s-pxy-2 s-radius s-bg-white l-block s-shadow-bottom row-gap ">
                 <div>
                   <h3 className="t4">¿Que aprenderas?</h3>
@@ -46,26 +47,31 @@ const Course = ({ course  }) => {
                 </div>
               </div>
               <h2>Temario del curso</h2>
-              <div className="s-border s-pxy-2 lg-pxy-4 s-radius s-bg-white l-block l-section s-shadow-bottom">
+              <div className=" s-border s-pxy-2 lg-pxy-4 s-radius s-bg-white l-block l-section s-shadow-bottom">
                 {
                   course.data.classes.map(cl =>(
                     <div className="course-class l-section" key={cl.class.id}>
                       <h3>{cl.class.title}</h3>
                       <p>{cl.class.desciption}</p>
-                      <ul>{
+                      <ul>
+                      {
                        cl.subjects.map(s =>(
-                         <li key={s.subject.id}>{s.subject.title}</li>
+                         <li key={s.subject.id}>
+                           <Link to={`/clase/${s.subject.id}`} className="color fourth-color">
+                           <div className="color fourth-color" >{s.subject.title}</div></Link>
+                         </li>
                        ))  
-                      }</ul>
+                      }
+                      </ul>
                     </div>
                   ))
                 }
               </div>
             </div>
-            <div className="lg-cols-3">
+            {/* <div className="lg-cols-3">
               <h2 className="t3">Profesor</h2>
-              <p>Beto Quiroga</p>
-            </div>
+              <p>Edwin Gabriel</p>
+            </div> */}
           </main>             
         </>
         }
@@ -73,10 +79,10 @@ const Course = ({ course  }) => {
     )
   }
 
-  const mapStateToProops = state =>({
+  const mapStateToProps = state =>({
     course: state.courseReducer.course
   })
 
 
-export default connect(mapStateToProops, {})(Course)
+export default connect(mapStateToProps, {})(Course)
 
